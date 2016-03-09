@@ -1,6 +1,6 @@
 var postsData = [
   {
-    title: 'Tintroducting Telescope',
+    title: 'Introducting Telescope',
     url: 'http://sachagrief.com/introducting-telescope/'
   },
   {
