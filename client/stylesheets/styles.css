@@ -77,6 +77,10 @@ body {
     float: right;
     margin-top: 7px; }
 
+ul.comments {
+  padding: 0;
+}
+
 .comments {
   list-style-type: none;
   margin: 0; }
