@@ -2,11 +2,6 @@ Meteor.publish('posts', function(options) {
   return Posts.find({}, options);
 });
 
-Meteor.publish('userPosts', function(userId) {
-  check(userId, String);
-  return Posts.find(userId);
-});
-
 Meteor.publish('singlePost', function(id) {
   check(id, String);
   return Posts.find(id);

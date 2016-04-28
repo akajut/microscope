@@ -1,5 +1,14 @@
-<template name="userPage">
-  <div class="post">
-    <h1>User Page</h1>
+<template name="userAllPosts">
+  <div class="posts post">
+    <h1>Posts</h1>
   </div>
+    <ul class="list-group">
+        {{#each userAllPosts }}
+          {{>postItem}}
+        {{else}}
+          <li>
+            This user has not posted any links.
+          </li>
+        {{/each}}
+    </ul>
 </template>
