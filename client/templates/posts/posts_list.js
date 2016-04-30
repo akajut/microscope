@@ -1,3 +1,5 @@
+/* jshint asi: true */
+
 Template.postsList.onRendered(function () {
   this.find('.wrapper')._uihooks = {
     insertElement: function (node, next) {
