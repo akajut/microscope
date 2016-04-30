@@ -12,14 +12,14 @@
     <div class="collapse navbar-collapse" id="navigation">
       <ul class="nav navbar-nav">
           <li class="{{activeRouteClass 'home' 'newPosts'}}">
-            <a href="{{pathFor 'newPosts'}}">New</a>
+            <a href="{{pathFor 'newPosts'}}">Newest</a>
           </li>
           <li class="{{activeRouteClass 'bestPosts'}}">
             <a href="{{pathFor 'bestPosts'}}">Best</a>
           </li>
         {{#if currentUser}}
           <li class="{{activeRouteClass 'postSubmit'}}">
-            <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
+            <button id="submit-post" type="button" class="btn btn-default btn-md" href="{{pathFor 'postSubmit'}}">Submit Post</button>
           </li>
           <li class="dropdown">
             {{> notifications}}
