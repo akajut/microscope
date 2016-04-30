@@ -18,6 +18,16 @@ textarea {
 #main {
   position: relative;
 }
+
+#submit-post {
+  margin: 7px;
+  padding: 5px;
+}
+
+.edit-post {
+  float: right;
+}
+
 .page {
   position: absolute;
   top: 0px;
@@ -59,7 +69,9 @@ textarea {
   .post .upvote {
     display: block;
     margin: 7px;
-    float: none; }
+    text-align: center;
+    float: none;
+    clear: both;}
   .post .post-content {
     float: left; }
     .post .post-content h3 {
@@ -78,7 +90,9 @@ textarea {
       margin: 0; }
   .post .discuss {
     display: block;
-    float: right;
+    float: none;
+    text-align: center;
+    clear: both;
     margin-top: 7px; }
 
 ul.comments {

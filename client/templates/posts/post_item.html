@@ -1,20 +1,19 @@
 <template name="postItem">
   <div class="post">
     <div class="row">
-
-        <div class="col-sm-2" style="text-align: center;">
-          <a href="#" class="upvote btn btn-default {{upvotedClass}}" style="clear: both;"><span class="glyphicon glyphicon-arrow-up"></span></a>
-            {{pluralize votes "Vote"}}
+    <div class="post-content col-sm-8 col-xs-12 col-sm-push-2">
+    {{#if ownPost}}<a class="btn btn-danger btn-xs edit-post" href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+      <p>
+        submitted by <a href="/user/{{userId}}/">{{author}}</a>
+      </p>
+    </div>
+        <div class="col-xs-6 col-sm-2 col-sm-pull-8">
+          <a href="#" class="upvote btn btn-default {{upvotedClass}}"><span class="glyphicon glyphicon-arrow-up"></span></a>
+            <span class="upvote">{{pluralize votes "Vote"}}</span>
         </div>
-        <div class="post-content col-sm-8">
-          <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-          <p>
-            submitted by <a href="/user/{{userId}}/">{{author}}</a>,
-            {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-          </p>
-        </div>
-        <div class="col-sm-2">
-          <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default " style="clear: both;">Discuss</a>
+        <div class="col-xs-6 col-sm-2">
+          <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default " >Discuss</a>
           <a class="discuss" href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
         </div>
     </div>
