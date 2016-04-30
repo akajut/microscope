@@ -11,6 +11,10 @@ body {
   background: #eee;
   color: #666666; }
 
+textarea {
+  width: 100%;
+}
+
 #main {
   position: relative;
 }

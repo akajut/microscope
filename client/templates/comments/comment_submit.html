@@ -1,9 +1,9 @@
 <template name="commentSubmit">
   <form name="comment" class="comment-form form">
     <div class="form-group {{errorClass 'body'}}">
-      <div class="controls">
+      <div class="controls col-xs-12">
         <label for="body" id="body">Comment on this post</label><br />
-        <textarea name="body" class="form-contol" rows="10" cols="120"></textarea>
+        <textarea name="body" class="form-contol" rows="3"></textarea>
         <span class="help-block">{{errorMessage 'body'}}</span>
       </div>
     </div>
